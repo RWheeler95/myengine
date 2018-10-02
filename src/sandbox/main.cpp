@@ -1,8 +1,11 @@
+#include <myengine/Entity.h>
+
 #include <iostream>
 
 int main()
 {
-   std::cout << "Hello World!" << std::endl;
+	Entity *ent = new Entity();
+	ent->addcomponent();
 
    return 0;
 }
