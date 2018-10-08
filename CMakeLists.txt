@@ -10,6 +10,8 @@ add_executable(sandbox
 add_library(myengine
 src/myengine/Entity.cpp
 src/myengine/Entity.h
+src/myengine/Component.cpp
+src/myengine/Component.h
 )
 
 target_link_libraries(sandbox myengine)
