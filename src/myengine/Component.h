@@ -11,12 +11,17 @@ private:
 
 	std::weak_ptr<Entity> entity;
 	
+
+
+public:
+	int test;
+
+	//virtual void onInit() = 0;
+
 	void onInit();
 	void onBegin();
 	//void onTick();
 	void onDisplay();
-
-public:
 
 	void getEntity();
 	void getCore();

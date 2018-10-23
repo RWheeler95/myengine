@@ -10,7 +10,8 @@ private:
 
 	int test;
 
-	std::vector<std::shared_ptr<Component>> components;
+	//std::vector<std::shared_ptr<Component>> components;
+	std::vector<Component*> components;
 	std::weak_ptr<Core> core;
 
 	//void tick();
@@ -24,4 +25,6 @@ public:
 
 	//template <typename T, typename A, typename B, typename C>
 	void addcomponent();
+	
+	Component* getComponent();
 };
