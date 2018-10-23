@@ -13,7 +13,7 @@ private:
 	
 	void onInit();
 	void onBegin();
-	void onTick();
+	//void onTick();
 	void onDisplay();
 
 public:
@@ -22,4 +22,7 @@ public:
 	void getCore();
 	void getKeyboard();
 	void getEnvironment();
+
+	void onTick();
+
 };
