@@ -36,6 +36,8 @@ src/myengine/Screen.cpp
 src/myengine/Screen.h
 src/myengine/Transform.cpp
 src/myengine/Transform.h
+src/myengine/Test.cpp
+src/myengine/Test.h
 )
 
 target_link_libraries(sandbox myengine)

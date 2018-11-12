@@ -28,16 +28,17 @@ void Entity::getCore()
 	std::shared_ptr<Core>;
 }
 
-void Entity::addcomponent()
+void Entity::addcomponent<T>()
 {
 	// Create a bland component
-	Component *comp = new Component();
+	//Component *comp = new Component();
+	std::shared_ptr<Component> comp = std::make_shared<Component>();
 
 	// Add the component to the component vector
 	components.push_back(comp);
 }
 
-Component* Entity::getComponent()
+std::shared_ptr<Component> Entity::getComponent()
 {
 	for (size_t i = 0; i < components.size(); i++)
 	{

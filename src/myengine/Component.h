@@ -14,13 +14,12 @@ private:
 
 
 public:
-	int test;
 
 	//virtual void onInit() = 0;
 
 	void onInit();
 	void onBegin();
-	//void onTick();
+	void onTick();
 	void onDisplay();
 
 	void getEntity();
@@ -28,6 +27,6 @@ public:
 	void getKeyboard();
 	void getEnvironment();
 
-	void onTick();
+	//void onTick();
 
 };
