@@ -1,5 +1,8 @@
 #include <memory>
 
+#ifndef _COMPONENT_H_
+#define _COMPONENT_H_
+
 class Entity;
 class Core;
 class Keyboard;
@@ -10,8 +13,6 @@ class Component
 private:
 
 	std::weak_ptr<Entity> entity;
-	
-
 
 public:
 
@@ -22,11 +23,11 @@ public:
 	void onTick();
 	void onDisplay();
 
-	void getEntity();
+	std::shared_ptr<Entity> getEntity();
+	void setEntity(std::shared_ptr<Entity> _entity);
 	void getCore();
 	void getKeyboard();
 	void getEnvironment();
 
-	//void onTick();
-
 };
+#endif

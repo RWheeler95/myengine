@@ -3,6 +3,7 @@
 #include <vector>
 #include <memory>
 
+class Component;
 class Core;
 
 class Entity
@@ -19,11 +20,30 @@ private:
 public:
 	
 	void getCore();
-
 	void tick();
 
-	//template <typename T, typename A, typename B, typename C>
-	void addcomponent();
+	template <typename T> std::shared_ptr<T> addComponent()
+	{
+		// Creating a component of type 'T'
+		std::shared_ptr<T> component = std::make_shared<T>();
+
+		components.push_back(component);
+
+		return component;
+	}
 	
-	std::shared_ptr<Component> getComponent();
+	template <typename T> std::shared_ptr<T> getComponent()
+	{
+		for (unsigned int i = 0; i < components.size(); i++)
+		{
+			std::shared_ptr<T> component = std::static_pointer_cast<T>(components.at(i));
+
+			if (component != nullptr)
+			{
+				return component;
+			}
+		}
+
+		return nullptr;
+	}
 };

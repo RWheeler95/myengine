@@ -1,4 +1,3 @@
-
 #include "Component.h"
 
 class Transform : public Component
@@ -10,4 +9,8 @@ class Transform : public Component
 
 	public:
 		void onInit();
+
+		float GetX() { return x; }
+
+		void SetX(float _x) { x = _x; }
 };

@@ -22,9 +22,14 @@ void Component::onDisplay()
 
 
 
-void Component::getEntity()
+std::shared_ptr<Entity> Component::getEntity()
 {
-	std::shared_ptr<Entity>;
+	return entity.lock();
+}
+
+void Component::setEntity(std::shared_ptr<Entity> _entity)
+{
+	entity = _entity;
 }
 
 void Component::getCore()
