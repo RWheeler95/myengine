@@ -1,7 +1,8 @@
+#include "Component.h"
+
 #include <vector>
 #include <memory>
 
-class Component;
 class Core;
 
 class Entity

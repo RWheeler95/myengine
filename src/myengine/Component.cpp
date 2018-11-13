@@ -1,5 +1,10 @@
 #include "Component.h"
 
+void Component::onInit()
+{
+
+}
+
 void Component::onBegin()
 {
 
