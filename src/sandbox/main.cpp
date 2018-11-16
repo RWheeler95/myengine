@@ -10,6 +10,8 @@
 
 int main()
 {
+	std::shared_ptr<Core> scene = std::make_shared<Core>();
+
 	std::shared_ptr<Entity> ent = std::make_shared<Entity>();
 
 	std::shared_ptr<Transform> transform = ent->addComponent<Transform>();
@@ -33,6 +35,7 @@ int main()
 		std::cout << transform->GetX() << std::endl;
 	}
 
+
 	//std::shared_ptr<Component> c1 = ent->getComponent();
 	//std::shared_ptr<Component> c2 = ent->getComponent();
 	//std::shared_ptr<Component> c3 = ent->getComponent();
@@ -47,8 +50,5 @@ int main()
 
 	std::cin.get();
 
-	//Core C;
-	//C.Run();
-
-   return 0;
+    return 0;
 }

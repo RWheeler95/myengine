@@ -1,4 +1,3 @@
-
 #include "Transform.h"
 
 void Transform::onInit()
@@ -7,4 +6,3 @@ void Transform::onInit()
 	y = 0.0f;
 	z = 0.0f;
 }
-

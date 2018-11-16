@@ -2,15 +2,17 @@
 
 class Transform : public Component
 {
-	private:
-		float x;
-		float y; 
-		float z;
+private:
 
-	public:
-		void onInit();
+	float x;
+	float y; 
+	float z;
 
-		float GetX() { return x; }
+public:
 
-		void SetX(float _x) { x = _x; }
+	void onInit();
+
+	float GetX() { return x; }
+
+	void SetX(float _x) { x = _x; }
 };
