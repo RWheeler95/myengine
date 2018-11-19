@@ -10,7 +10,6 @@ class Entity
 {
 private:
 
-	//std::vector<std::shared_ptr<Component>> components;
 	std::vector<std::shared_ptr<Component>> components;
 	std::weak_ptr<Core> core;
 

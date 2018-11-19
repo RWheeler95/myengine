@@ -1,4 +1,4 @@
-#include "Component.h"
+#include "myengine/Component.h"
 
 void Component::onInit()
 {
