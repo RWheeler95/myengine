@@ -3,6 +3,7 @@
 #include <myengine/Component.h>
 #include <myengine/Test.h>
 #include <myengine/Transform.h>
+#include <myengine/Screen.h>
 
 #include <iostream>
 #include <vector>
@@ -11,6 +12,8 @@
 int main()
 {
 	std::shared_ptr<Core> scene = std::make_shared<Core>();
+
+	std::shared_ptr<Screen> window = std::make_shared<Screen>();
 
 	std::shared_ptr<Entity> ent = std::make_shared<Entity>();
 
