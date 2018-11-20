@@ -1,5 +1,7 @@
 #include "Component.h"
 
+#include <GL/glew.h>
+
 class MeshRenderer : public Component
 {
 private:
@@ -8,5 +10,6 @@ private:
 
 public:
 	
+	void TriangleData();
 
 };

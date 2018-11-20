@@ -50,6 +50,7 @@ src/myengine/Transform.cpp
 src/myengine/Transform.h
 src/myengine/Test.cpp
 src/myengine/Test.h
+src/myengine/Vec3.h
 )
 
 add_executable(sandbox

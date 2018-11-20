@@ -13,7 +13,7 @@ int main()
 {
 	std::shared_ptr<Core> scene = std::make_shared<Core>();
 
-	std::shared_ptr<Screen> window = std::make_shared<Screen>();
+	//std::shared_ptr<Screen> window = std::make_shared<Screen>();
 
 	std::shared_ptr<Entity> ent = std::make_shared<Entity>();
 
