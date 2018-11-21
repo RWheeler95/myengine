@@ -1,4 +1,5 @@
 #include <vector>
+#include <memory>
 
 #include <GL/glew.h>
 
@@ -9,7 +10,7 @@ private:
 	GLuint positionsVboId = 0;
 	//GLuint vaoId = 0;
 
-	//std::vector<std::shared_ptr<VertexArray>> bindBuffers;
+	std::vector<std::shared_ptr<VertexArray>> bindBuffers;
 
 public:
 

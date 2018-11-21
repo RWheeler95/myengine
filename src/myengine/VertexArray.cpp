@@ -17,7 +17,7 @@ void VertexArray::Vao()
 	// Bind the position VBO, assign it to position 0 on the bound VAO 
 	// and flag it to be used
 	glBindBuffer(GL_ARRAY_BUFFER, positionsVboId);
-	// buffer->bindBuffer();
+	buffer->bindBuffer();
 
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE,
 		3 * sizeof(GLfloat), (void *)0);

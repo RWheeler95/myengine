@@ -7,10 +7,9 @@ class VertexArray
 {
 private:
 
-	std::vector<std::shared_ptr<VertexBuffer>> buffers;
 	GLuint vaoId = 0;
-
-	//std::vector<std::shared_ptr<VertexArray>> bindBuffers;
+	std::vector<std::shared_ptr<VertexBuffer>> buffers;
+	std::vector<std::shared_ptr<VertexArray>> bindBuffers;
 
 public:
 
