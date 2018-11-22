@@ -12,6 +12,24 @@ void Core::Init()
 	}
 }
 
+void Core::Update()
+{
+	bool quit = false;
+
+	while (!quit)
+	{
+		SDL_Event event = { 0 };
+
+		while (SDL_PollEvent(&event))
+		{
+			if (event.type == SDL_QUIT)
+			{
+				quit = true;
+			}
+		}
+	}
+}
+
 void Core::Run()
 {
 	while (true)

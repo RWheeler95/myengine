@@ -3,24 +3,35 @@
 
 #include <GL/glew.h>
 
+#include "Vec3.h"
+
+#include "VertexBuffer.h"
+
 class VertexArray
 {
 private:
 
 	GLuint vaoId = 0;
+
 	std::vector<std::shared_ptr<VertexBuffer>> buffers;
-	std::vector<std::shared_ptr<VertexArray>> bindBuffers;
 
 public:
+	
+	VertexArray();
 
-	void Vao();
+	GLuint GetVaoId() { return vaoId; }
 
-	std::shared_ptr<VertexBuffer> addBuffer()
+	std::shared_ptr<VertexBuffer> addBuffer(std::vector<vec3> data)
 	{
-		std::shared_ptr<VertexBuffer> buffer = std::make_shared<VertexBuffer>();
+		std::shared_ptr<VertexBuffer> buffer = std::make_shared<VertexBuffer>(data);
 
 		buffers.push_back(buffer);
 
 		return buffer;
 	}
+
+	void setAttribPointer(int pos, int size);
+
+	void Reset();
+
 };

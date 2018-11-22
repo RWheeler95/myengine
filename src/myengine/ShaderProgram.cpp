@@ -1,5 +1,12 @@
 #include "ShaderProgram.h"
 
+ShaderProgram::ShaderProgram()
+{
+	VertexShader();
+	FragmentShader();
+	LinkShaders();
+}
+
 void ShaderProgram::VertexShader()
 {
 	const GLchar *vertexShaderSrc =

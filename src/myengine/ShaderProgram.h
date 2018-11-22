@@ -13,7 +13,10 @@ private:
 	GLuint programId;
 
 public:
-
+	ShaderProgram();
+	
+	GLuint GetProgramId() { return programId; }
+	
 	void VertexShader();
 	void FragmentShader();
 	void LinkShaders();
