@@ -3,6 +3,7 @@
 #include <myengine/Component.h>
 #include <myengine/Test.h>
 #include <myengine/Transform.h>
+#include <myengine/MeshRenderer.h>
 #include <myengine/Screen.h>
 
 #include <iostream>
@@ -23,9 +24,23 @@ int main()
 
 	window->Create();
 
-	//std::shared_ptr<Entity> ent = std::make_shared<Entity>();
+	std::shared_ptr<Entity> ent = std::make_shared<Entity>();
 
-	//std::shared_ptr<Transform> transform = ent->addComponent<Transform>();
+	std::shared_ptr<Transform> transform = ent->addComponent<Transform>();
+	std::shared_ptr<MeshRenderer> meshRenderer = ent->addComponent<MeshRenderer>();
+
+	std::vector<vec3> positions;
+
+		positions.push_back({ -0.5f, 0.5f, 0.0f });
+		positions.push_back({ -0.5f, -0.5f, 0.0f });
+		positions.push_back({ 0.5f, -0.5f, 0.0f });
+		positions.push_back({ -0.5f, 0.5f, 0.0f });
+		positions.push_back({ 0.5f, -0.5f, 0.0f });
+		positions.push_back({ 0.5f, 0.5f, 0.0f });
+
+	meshRenderer->SetMesh(positions);
+
+	meshRenderer->Draw(window);
 
 	//transform->setEntity(ent);
 
@@ -48,39 +63,36 @@ int main()
 
 
 
-	std::vector<vec3> positions;
+	//std::vector<vec3> positions;
 
-	positions.push_back({ -0.5f, 0.5f, 0.0f });
-	positions.push_back({ -0.5f, -0.5f, 0.0f });
-	positions.push_back({ 0.5f, -0.5f, 0.0f });
-	positions.push_back({ -0.5f, 0.5f, 0.0f });
-	positions.push_back({ 0.5f, -0.5f, 0.0f });
-	positions.push_back({ 0.5f, 0.5f, 0.0f });
+	//positions.push_back({ -0.5f, 0.5f, 0.0f });
+	//positions.push_back({ -0.5f, -0.5f, 0.0f });
+	//positions.push_back({ 0.5f, -0.5f, 0.0f });
+	//positions.push_back({ -0.5f, 0.5f, 0.0f });
+	//positions.push_back({ 0.5f, -0.5f, 0.0f });
+	//positions.push_back({ 0.5f, 0.5f, 0.0f });
 
 
-	std::shared_ptr<VertexArray> va = std::make_shared<VertexArray>();
+	//std::shared_ptr<VertexArray> va = std::make_shared<VertexArray>();
 
-	std::shared_ptr<VertexBuffer> vb = va->addBuffer(positions);
+	//std::shared_ptr<VertexBuffer> vb = va->addBuffer(positions);
 
-	// Bind the position VBO, assign it to position 0 on the bound VAO 
-	// and flag it to be used
-	vb->bindBuffer();
+	//// Bind the position VBO, assign it to position 0 on the bound VAO 
+	//// and flag it to be used
+	//vb->bindBuffer();
 
-	va->setAttribPointer(0, 3);
+	//va->setAttribPointer(0, 3);
 
-	va->Reset();
+	//va->Reset();
 
-	std::shared_ptr<ShaderProgram> sp = std::make_shared<ShaderProgram>();
+	//std::shared_ptr<ShaderProgram> sp = std::make_shared<ShaderProgram>();
 
-	window->Display(sp->GetProgramId(), va->GetVaoId(), positions.size());
+	//window->Display(sp->GetProgramId(), va->GetVaoId(), positions.size());
 	
 	window->Swap();
 
 
 	scene->Update();
-
-
-	va->Reset();
 
 
 	std::cin.get();

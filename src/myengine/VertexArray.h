@@ -1,10 +1,8 @@
 #include <vector>
 #include <memory>
-
 #include <GL/glew.h>
 
 #include "Vec3.h"
-
 #include "VertexBuffer.h"
 
 class VertexArray
