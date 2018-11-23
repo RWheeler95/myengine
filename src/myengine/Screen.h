@@ -1,28 +1,26 @@
+// System includes
 #include <memory>
 #include <vector>
-
 #include <GL/glew.h>
 #include <SDL2/SDL.h>
 
 /**
-* Represents the Screen state
-*/
+ * Screen class that creates and manages the screen
+ */
 class Screen
 {
 private:
 	
-	SDL_Window* window;
+	SDL_Window* window; ///< Reference to the window.
 
 public:
 
-	void Create(); ///< The initial creation of the window.
+	void Create(); ///< Function that creates the window.
 
-	void Display(GLuint programId, GLuint vaoId, int vertices); ///< The display to the screen.
+	void Display(GLuint programId, GLuint vaoId, int vertices); ///< Function that draws to the buffer.
 
-	void Reset();
+	void Swap(); ///< Function that displays from the buffer to the screen.
 
-	void Swap();
-
-	void Uninit();
+	void Uninit(); ///< Function that destroys and quits the window.
 
 };

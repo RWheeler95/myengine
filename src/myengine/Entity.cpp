@@ -1,8 +1,10 @@
+// File includes
 #include "Entity.h"
 #include "Component.h"
 
 void Entity::tick()
 {
+	// Runs through all the components in the engine
 	for (size_t i = 0; i < components.size(); i++)
 	{
 		components.at(i)->onTick();
@@ -23,6 +25,7 @@ void Entity::display()
 
 void Entity::getCore()
 {
+	// Shared pointer to Core
 	std::shared_ptr<Core>;
 }
 
