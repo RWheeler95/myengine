@@ -1,3 +1,4 @@
+// File includes
 #include <myengine/Entity.h>
 #include <myengine/Core.h>
 #include <myengine/Component.h>
@@ -5,14 +6,13 @@
 #include <myengine/Transform.h>
 #include <myengine/MeshRenderer.h>
 #include <myengine/Screen.h>
+#include <myengine/VertexArray.h>
+#include <myengine/ShaderProgram.h>
 
+// System includes
 #include <iostream>
 #include <vector>
 #include <memory>
-
-#include <myengine/VertexArray.h>
-
-#include <myengine/ShaderProgram.h>
 
 int main()
 {
