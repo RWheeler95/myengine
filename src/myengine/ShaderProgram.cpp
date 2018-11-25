@@ -3,13 +3,14 @@
 
 ShaderProgram::ShaderProgram()
 {
-	VertexShader();
-	FragmentShader();
-	LinkShaders();
+	VertexShader(); // ???
+	FragmentShader(); // ???
+	LinkShaders(); // ???
 }
 
 void ShaderProgram::VertexShader()
 {
+	// ???
 	const GLchar *vertexShaderSrc =
 		"attribute vec3 in_Position;             " \
 		"                                        " \
@@ -18,7 +19,7 @@ void ShaderProgram::VertexShader()
 		"  gl_Position = vec4(in_Position, 1.0); " \
 		"}                                       ";
 
-	// Create a new vertex shader, attach source code, compile it and check for errors
+	// Creates a new vertex shader, attaches source code and then compiles it
 	vertexShaderId = glCreateShader(GL_VERTEX_SHADER);
 	glShaderSource(vertexShaderId, 1, &vertexShaderSrc, NULL);
 	glCompileShader(vertexShaderId);
@@ -26,19 +27,21 @@ void ShaderProgram::VertexShader()
 
 	if (!success)
 	{
+		// Throws an exception if it does not succeed
 		throw std::exception();
 	}
 }
 
 void ShaderProgram::FragmentShader()
 {
+	// ???
 	const GLchar *fragmentShaderSrc =
 		"void main()                        " \
 		"{                                  " \
 		"  gl_FragColor = vec4(0, 0, 1, 1); " \
 		"}                                  ";
 
-	// Create a new fragment shader, attach source code, compile it and check for errors
+	// Creates a new fragment shader, attaches source code and then compiles it
 	fragmentShaderId = glCreateShader(GL_FRAGMENT_SHADER);
 	glShaderSource(fragmentShaderId, 1, &fragmentShaderSrc, NULL);
 	glCompileShader(fragmentShaderId);
@@ -46,13 +49,14 @@ void ShaderProgram::FragmentShader()
 
 	if (!success)
 	{
+		// Throws an exception if it does not succeed
 		throw std::exception();
 	}
 }
 
 void ShaderProgram::LinkShaders()
 {
-	// Create new shader program and attach our shader objects
+	// Creates a new shader program and attaches the shader objects
 	programId = glCreateProgram();
 	glAttachShader(programId, vertexShaderId);
 	glAttachShader(programId, fragmentShaderId);
@@ -61,17 +65,18 @@ void ShaderProgram::LinkShaders()
 	// position during the link
 	glBindAttribLocation(programId, 0, "in_Position");
 
-	// Perform the link and check for failure
+	// Performs the link
 	glLinkProgram(programId);
 	glGetProgramiv(programId, GL_LINK_STATUS, &success);
 
 	if (!success)
 	{
+		// Throws an exception if it does not succeed
 		throw std::exception();
 	}
 
-	// Detach and destroy the shader objects. These are no longer needed 
-	// because we now have a complete shader program
+	// Detaches and destroys the shader objects as these are no longer needed 
+	// because there is now a complete shader program
 	glDetachShader(programId, vertexShaderId);
 	glDeleteShader(vertexShaderId);
 	glDetachShader(programId, fragmentShaderId);

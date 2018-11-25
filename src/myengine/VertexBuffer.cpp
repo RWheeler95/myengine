@@ -1,3 +1,4 @@
+// File includes
 #include "VertexBuffer.h"
 
 VertexBuffer::VertexBuffer(std::vector<vec3> data)

@@ -1,10 +1,14 @@
+// System includes
 #include <vector>
 #include <memory>
-
 #include <GL/glew.h>
 
+// File includes
 #include "Vec3.h"
 
+/**
+ * Vertex buffer class
+ */
 class VertexBuffer
 {
 private:

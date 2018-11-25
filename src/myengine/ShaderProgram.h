@@ -11,24 +11,24 @@ class ShaderProgram
 {
 private:
 
-	GLint success = 0;
+	GLint success = 0; ///< Initialises success to 0.
 
-	GLuint vertexShaderId;
+	GLuint vertexShaderId; ///< unsigned int for vertexShaderId.
 
-	GLuint fragmentShaderId;
+	GLuint fragmentShaderId; ///< unsigned int for fragmentShaderId.
 
-	GLuint programId;
+	GLuint programId; ///< unsigned int for programId.
 
 public:
 
-	ShaderProgram();
+	ShaderProgram(); ///< ???
 	
-	GLuint GetProgramId() { return programId; }
+	GLuint GetProgramId() { return programId; } ///< ???
 	
-	void VertexShader();
+	void VertexShader(); ///< Function for the vertex shader.
 
-	void FragmentShader();
+	void FragmentShader(); ///< Function for the fragment shader.
 
-	void LinkShaders();
+	void LinkShaders(); ///< Function which links the shaders.
 
 };
