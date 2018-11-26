@@ -3,14 +3,14 @@
 
 ShaderProgram::ShaderProgram()
 {
-	VertexShader(); // ???
-	FragmentShader(); // ???
-	LinkShaders(); // ???
+	VertexShader(); 
+	FragmentShader(); 
+	LinkShaders(); 
 }
 
 void ShaderProgram::VertexShader()
 {
-	// ???
+	
 	const GLchar *vertexShaderSrc =
 		"attribute vec3 in_Position;             " \
 		"                                        " \
@@ -34,7 +34,7 @@ void ShaderProgram::VertexShader()
 
 void ShaderProgram::FragmentShader()
 {
-	// ???
+	
 	const GLchar *fragmentShaderSrc =
 		"void main()                        " \
 		"{                                  " \

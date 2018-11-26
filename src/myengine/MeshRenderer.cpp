@@ -31,7 +31,7 @@ void MeshRenderer::Draw(std::shared_ptr<Screen> window)
 	// Sets sp to the shader program
 	sp = std::make_shared<ShaderProgram>();
 
-	// ???
+	// Displays to the window
 	window->Display(sp->GetProgramId(), va->GetVaoId(), positions.size());
 
 	// Resets the state
